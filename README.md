@@ -56,8 +56,8 @@ You need GitHub account = Auto Register & Login ✅
 ## 🔗 Important Links
 
 - Main Project: [archalics](https://github.com/newssungoldentoday-dev/archalics)
-- Archa License Text: [LICENSE.md](https://github.com/newssungoldentoday-dev/archalics/blob/main/LICENSE)
-- GitHub Marketplace: [Archa App](https://github.com/marketplace/archalics)
+- Archa License Text: [LICENSE](https://github.com/newssungoldentoday-dev/archalics/blob/main/LICENSE)
+- GitHub Marketplace: [Archa App](https://github.com/apps/archa-license)
 
 ---
 
