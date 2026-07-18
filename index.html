@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- PLAYABLE_TOUCH_PATCH_V1 --><script>
+(function() {
+  if (window.__playableTouchPatchInstalled) return;
+  window.__playableTouchPatchInstalled = true;
+  var origAdd = EventTarget.prototype.addEventListener;
+  var blockedTypes = { touchstart: 1, touchmove: 1, wheel: 1 };
+  EventTarget.prototype.addEventListener = function(type, listener, options) {
+    if (blockedTypes[type]) {
+      if (options === undefined || options === null) {
+        options = { passive: true };
+      } else if (typeof options === 'boolean') {
+        options = { capture: options, passive: true };
+      } else {
+        options = Object.assign({}, options, { passive: true });
+      }
+    }
+    return origAdd.call(this, type, listener, options);
+  };
+})();
+</script><script>window.Intl=window.Intl||{};Intl.t=function(s){return(Intl._locale&&Intl._locale[s])||s;};</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archa License - Community Edition</title>
+<style>
+:root{--bg:#0d1117;--card:#161b22;--border:#30363d;--text:#c9d1d9;--accent:#58a6ff;--green:#238636}
+*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial}
+body{background:var(--bg);color:var(--text);line-height:1.6}
+header{text-align:center;padding:60px 20px}
+header h1{font-size:2.8rem;color:#fff}
+.badge{display:inline-block;background:var(--green);color:#fff;padding:6px 14px;border-radius:20px;margin-top:12px}
+.container{max-width:900px;margin:auto;padding:20px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:25px;margin-bottom:20px}
+.card h2{color:#fff;margin-bottom:12px}
+.squad{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin-top:15px}
+.member{background:#0d1117;border:1px solid var(--border);border-radius:10px;padding:15px;text-align:center}
+.member img{width:70px;height:70px;border-radius:50%;background:#30363d;margin-bottom:10px}
+.member h3{color:#fff;font-size:1rem}
+.member p{font-size:0.85rem;color:#8b949e}
+.btn{display:inline-block;background:var(--green);color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;margin:6px 6px 0 0}
+.btn.secondary{background:transparent;border:1px solid var(--border)}
+pre{background:#0d1117;border:1px solid var(--border);padding:15px;border-radius:8px;overflow-x:auto;font-size:0.85rem}
+footer{text-align:center;padding:40px;color:#8b949e;font-size:0.9rem}
+</style>
+</head>
+<body>
+<header>
+<h1>Archa License</h1>
+<p>Community Edition — Free, Open & Made in Baguio City 🇵🇭</p>
+<span class="badge">● LIVE on GitHub Marketplace</span>
+<p style="margin-top:8px">by Rogge Ramos</p>
+</header>
+
+<div class="container">
+<div class="card">
+<h2>Our Squad 👥</h2>
+<p>Meet the creators behind Archa License</p>
+<div class="squad">
+<div class="member">
+<img src="https://avatars.githubusercontent.com/u/0" alt="Rogge">
+<h3>Rogge Ramos</h3>
+<p>Creator & Lead<br>Baguio City, PH</p>
+<a href="https://github.com/newssungoldentoday-dev" style="color:#58a6ff;font-size:0.85rem">GitHub Profile</a>
+</div>
+<div class="member">
+<img src="https://avatars.githubusercontent.com/u/1" alt="Contributor">
+<h3>You? Join Squad!</h3>
+<p>Be first contributor<br>Open Pull Request</p>
+<a href="data:application/octet-stream;base64,IyBDb250cmlidXRpbmcgdG8gQXJjaGEgTGljZW5zZQoKVGhhbmsgeW91IGZvciB3YW50aW5nIHRvIGpvaW4gdGhlIEFyY2hhIFNxdWFkISDwn4e18J+HrQoKIyMgSG93IHRvIENvbnRyaWJ1dGUKMS4gKipGb3JrKiogdGhlIHJlcG86IGdpdGh1Yi5jb20vbmV3c3N1bmdvbGRlbnRvZGF5LWRldi9hcmNoYWxpY3MKMi4gKipDcmVhdGUgYnJhbmNoKio6IGBnaXQgY2hlY2tvdXQgLWIgZmVhdHVyZS95b3VyLWZlYXR1cmVgCjMuICoqQ29tbWl0Kio6IGBnaXQgY29tbWl0IC1tICJBZGQgeW91ciBmZWF0dXJlImAKNC4gKipQdXNoKio6IGBnaXQgcHVzaCBvcmlnaW4gZmVhdHVyZS95b3VyLWZlYXR1cmVgCjUuICoqT3BlbiBQdWxsIFJlcXVlc3QqKiDigJQgSSB3aWxsIHJldmlldyB3aXRoaW4gMjRoIQoKIyMgUnVsZXMKLSBCZSByZXNwZWN0ZnVsIOKAlCBObyBiYWQgd29yZHMKLSBLZWVwIGl0IHNpbXBsZSDigJQgQXJjaGEgTGljZW5zZSBpcyBmb3IgZXZlcnlvbmUKLSBBZGQgeW91ciBuYW1lIHRvIENPTlRSSUJVVE9SUy5tZAoKIyMgSXNzdWVzCi0gQnVnPyBPcGVuIElzc3VlIHdpdGggc2NyZWVuc2hvdCArIHN0ZXBzCi0gRmVhdHVyZT8gT3BlbiBJc3N1ZSB3aXRoICJGZWF0dXJlOiB5b3VyIGlkZWEiCgpRdWVzdGlvbnM/IE9wZW4gSXNzdWUg4oCUIEkgcmVwbHkgZmFzdCBmcm9tIEJhZ3VpbyBDaXR5IQoK4oCUIFJvZ2dlIFJhbW9zCg==" style="color:#58a6ff;font-size:0.85rem">How to Join</a>
+</div>
+</div>
+</div>
+
+<div class="card">
+<h2>What is Archa License?</h2>
+<p>Simple license for open-source projects. Free for personal, educational, open-source. Attribution required.</p>
+<a class="btn" href="https://github.com/newssungoldentoday-dev/archalics/blob/main/LICENSE">View LICENSE</a>
+<a class="btn secondary" href="https://github.com/newssungoldentoday-dev/archalics">GitHub Repo</a>
+</div>
+
+<div class="card">
+<h2>Quick Start</h2>
+<pre><code>## License
+This project uses Archa License Community Edition
+https://github.com/newssungoldentoday-dev/archalics
+Copyright (c) 2026 Rogge Ramos</code></pre>
+</div>
+
+<div class="card">
+<h2>Want to Contribute?</h2>
+<p>1. Fork repo<br>2. Add your fix<br>3. PR → You become Squad member!</p>
+<a class="btn" href="data:application/octet-stream;base64,IyBDb250cmlidXRpbmcgdG8gQXJjaGEgTGljZW5zZQoKVGhhbmsgeW91IGZvciB3YW50aW5nIHRvIGpvaW4gdGhlIEFyY2hhIFNxdWFkISDwn4e18J+HrQoKIyMgSG93IHRvIENvbnRyaWJ1dGUKMS4gKipGb3JrKiogdGhlIHJlcG86IGdpdGh1Yi5jb20vbmV3c3N1bmdvbGRlbnRvZGF5LWRldi9hcmNoYWxpY3MKMi4gKipDcmVhdGUgYnJhbmNoKio6IGBnaXQgY2hlY2tvdXQgLWIgZmVhdHVyZS95b3VyLWZlYXR1cmVgCjMuICoqQ29tbWl0Kio6IGBnaXQgY29tbWl0IC1tICJBZGQgeW91ciBmZWF0dXJlImAKNC4gKipQdXNoKio6IGBnaXQgcHVzaCBvcmlnaW4gZmVhdHVyZS95b3VyLWZlYXR1cmVgCjUuICoqT3BlbiBQdWxsIFJlcXVlc3QqKiDigJQgSSB3aWxsIHJldmlldyB3aXRoaW4gMjRoIQoKIyMgUnVsZXMKLSBCZSByZXNwZWN0ZnVsIOKAlCBObyBiYWQgd29yZHMKLSBLZWVwIGl0IHNpbXBsZSDigJQgQXJjaGEgTGljZW5zZSBpcyBmb3IgZXZlcnlvbmUKLSBBZGQgeW91ciBuYW1lIHRvIENPTlRSSUJVVE9SUy5tZAoKIyMgSXNzdWVzCi0gQnVnPyBPcGVuIElzc3VlIHdpdGggc2NyZWVuc2hvdCArIHN0ZXBzCi0gRmVhdHVyZT8gT3BlbiBJc3N1ZSB3aXRoICJGZWF0dXJlOiB5b3VyIGlkZWEiCgpRdWVzdGlvbnM/IE9wZW4gSXNzdWUg4oCUIEkgcmVwbHkgZmFzdCBmcm9tIEJhZ3VpbyBDaXR5IQoK4oCUIFJvZ2dlIFJhbW9zCg==">Read Contributing Guide</a>
+</div>
+</div>
+
+<footer>© 2026 Rogge Ramos — Baguio City, Philippines — Made with ❤️</footer>
+</body>
+  </html>
+  
